@@ -3,40 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Profile</title>
+  <title>My Profile Page</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .about, .contact, .experience, .projects, .skills, .interests, .achievements, .testimonials {
+      margin-bottom: 50px;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .about p {
+      text-align: center;
+    }
+    .timeline {
+      list-style: none;
+      padding: 0;
+    }
+    .timeline li {
+      margin-bottom: 20px;
+    }
+    .skills .skill {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+    .skills .skill .progress-bar {
+      width: 70%;
+      height: 10px;
+      background: #e4e4e4;
+      margin-left: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .skills .skill .progress-bar span {
+      display: block;
+      height: 100%;
+      background: #6a11cb;
+    }
+    .projects .project {
+      border: 1px solid #e4e4e4;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .footer a {
+      color: #6a11cb;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Hi, I'm <span>Priya Lekha Guda</span></h1>
-      <p>Software Engineer 2 | Technology Enthusiast | Skilled Emcee | Singer | Painter</p>
-      <a href="#about" class="btn">Know More About Me</a>
+
+<header data-aos="fade-down">
+  <h1>Hi, I'm Priya Lekha Guda</h1>
+  <p>Software Engineer 2 | Technology Enthusiast | Emcee | Singer | Chef</p>
+</header>
+
+<section class="about" data-aos="fade-right">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p>I am a passionate developer with expertise in building modern, responsive web applications. I love creating interactive user experiences and solving challenging problems.</p>
+  </div>
+</section>
+
+<section class="experience" data-aos="fade-left">
+  <div class="container">
+    <h2 class="section-title">Work Experience</h2>
+    <ul class="timeline">
+      <li>Software Engineer 2 at Deloitte (2021 - Present)</li>
+      <li>Software Development Intern at Deloitte (Jan 2021 - Jun 2021)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="projects" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="project">
+      <h3>Book Exchange Management</h3>
+      <p>Description</p>
     </div>
-  </header>
-  
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Hello! I'm a passionate web developer who loves building beautiful and functional websites. I enjoy learning new technologies and constantly improving my skills.</p>
+    <div class="project">
+      <h3>Project B</h3>
+      <p>Description of Project B.</p>
     </div>
-  </section>
-  
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>My Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Project 1</h3>
-          <p>A brief description of the project.</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>Project 2</h3>
-          <p>A brief description of the project.</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>Project 3</h3>
-          <p
+  </div>
+</section>
+
+<section class="skills" data-aos="fade-right">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="skill">
+      <span>HTML</span>
+      <div class="progress-bar">
+        <span style="width: 90%;"></span>
+      </div>
+    </div>
+    <div class="skill">
+      <span>CSS</span>
+      <div class="progress-bar">
+        <span style="width: 85%;"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" data-aos="fade-left">
+  <div class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Email: your.email@example.com</p>
+    <p>Phone: 123-456-7890</p>
+    <div>
+      <a href="https://github.com/GudaPriyaLekha" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      <a href="https://linkedin.com/in/priyalekhaguda" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <p>&copy; 2025. Built with love and passion.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
