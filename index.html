@@ -12,12 +12,16 @@
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
     }
     header {
       background: linear-gradient(to right, #6a11cb, #2575fc);
       color: white;
       text-align: center;
       padding: 100px 20px;
+      position: relative;
+      z-index: 10;
     }
     header h1 {
       font-size: 3rem;
@@ -25,69 +29,80 @@
     }
     header p {
       font-size: 1.2rem;
+      margin-top: 10px;
     }
-    section {
+    .about, .projects, .skills, .experience, .contact {
       padding: 50px 20px;
     }
     .container {
       max-width: 1200px;
       margin: auto;
     }
-    .about, .contact, .experience, .projects, .skills, .interests, .achievements, .testimonials {
-      margin-bottom: 50px;
-    }
     .section-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 20px;
       text-align: center;
+      color: #b3adb9;
     }
-    .about p {
-      text-align: center;
+    .about-item, .job, .project, .skill {
+      margin-bottom: 30px;
     }
-    .timeline {
-      list-style: none;
-      padding: 0;
+    .about-item h3 {
+      font-size: 1.5rem;
+      color: #6a11cb;
     }
-    .timeline li {
-      margin-bottom: 20px;
+    .about-item p, .job ul, .project p {
+      font-size: 1rem;
+      color: #555;
+    }
+    .job h3, .project h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .job ul li, .project ul li {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+    .job, .project {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .project a {
+      color: #6a11cb;
+      font-weight: bold;
+    }
+    .project a:hover {
+      text-decoration: underline;
     }
     .skills .skill {
-      margin: 10px 0;
       display: flex;
-      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
     }
-    .skills .skill .progress-bar {
+    .progress-bar {
       width: 70%;
       height: 10px;
       background: #e4e4e4;
-      margin-left: 20px;
       border-radius: 5px;
+      margin-left: 10px;
       overflow: hidden;
     }
-    .skills .skill .progress-bar span {
+    .progress-bar span {
       display: block;
       height: 100%;
       background: #6a11cb;
     }
-    .projects .project {
-      border: 1px solid #e4e4e4;
-      border-radius: 5px;
-      padding: 20px;
-      margin-bottom: 20px;
+    .contact a {
+      color: #9c95a3;
+      margin-right: 20px;
     }
-    .footer {
+    footer {
       background: #333;
       color: white;
       text-align: center;
-      padding: 20px;
-    }
-    .footer a {
-      color: #6a11cb;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    .footer a:hover {
-      text-decoration: underline;
+      padding: 20px 0;
     }
   </style>
 </head>
@@ -95,157 +110,195 @@
 
 <header data-aos="fade-down">
   <h1>Hi, I'm Priya Lekha Guda</h1>
-  <p>Software Engineer 2 | Technology Enthusiast | Emcee | Singer | Cooking Enthusiast</p>
+  <p>Software Engineer | Technology Enthusiast | Emcee | Singer | Culinary Artist</p>
 </header>
 
 <section class="about" data-aos="fade-right">
   <div class="container">
     <h2 class="section-title">About Me</h2>
-    <p>I am a results-driven professional with 3+ years in full-stack development andproject execution. Skilled in coding, decision-making, and cross-functionalcollaboration, balancing technical expertise with project management forseamless delivery. Proactive learner, focused on innovation and success.</p>
+    <p>As a software engineer with over 3 years of experience, I bring a blend of technical expertise and creativity to every project I take on. Whether it's solving complex problems or creating something beautiful, I approach every challenge with passion and dedication. Outside of work, I enjoy exploring my other interests such as singing, cooking, and painting. Here's a glimpse into my world:</p>
+    
+    <div class="about-item">
+      <h3>The Culinary Artist 🍳</h3>
+      <p>Cooking is an adventure for me! From experimenting with pastas to crafting the perfect biryani, every dish I create tells a story. Explore more on my Instagram!</p>
+    </div>
+
+    <div class="about-item">
+      <h3>The Singing Enthusiast 🎶</h3>
+      <p>Trained in Carnatic music, I love to sing everything from Bollywood hits to Tollywood tracks. Check out my Instagram for my latest covers!</p>
+    </div>
+
+    <div class="about-item">
+      <h3>The Painter in the Making 🖌️</h3>
+      <p>Starting with basic sketches, my journey as a painter bloomed during the lockdown. Follow my Instagram to see my art evolve!</p>
+    </div>
+
+    <div class="about-item">
+      <h3>Something Big Is Coming… 🚀</h3>
+      <p>Stay tuned for something exciting launching soon on Instagram. Creativity has no limits, and neither will this new project!</p>
+    </div>
   </div>
 </section>
 
-<section class="about-me" data-aos="fade-left">
-  <h2 class="section-title">Get to Know Me – A Glimpse into My World</h2>
-
-  <div class="about-item">
-    <h3>The Culinary Artist 🍳</h3>
-    <p>Cooking isn't just a hobby, it's an adventure! From experimenting with pastas and lasagnas to crafting the perfect biryani, quesadillas, burgers, and pizzas, my kitchen is my playground. Whether it's a savory Indian curry or a spicy Chinese Manchurian, every dish is a chance to explore a new flavor. Oh, and I don't stop there—I make everything from soul-warming soups to delicious daily meals. Each plate I serve tells a story, and I’m always ready to try something new!</p>
-  </div>
-
-  <div class="about-item">
-    <h3>The Singing Enthusiast 🎶</h3>
-    <p>Music flows through me! Trained in Carnatic music for 5 years, my love for singing knows no bounds. From Bollywood hits to soulful Tollywood tracks and classic English songs, I love belting out my favorite tunes. Catch my latest performances on my Instagram page—who knows, maybe you'll find your next favorite cover!</p>
-  </div>
-
-  <div class="about-item">
-    <h3>The Painter in the Making 🖌️</h3>
-    <p>I started with basic sketches, just a child with a crayon in hand. But summer breaks fueled my passion for coloring and drawing, and slowly, I honed my skills. The lockdown turned me into a canvas artist, and now, every brushstroke is an expression of my soul. Follow my painting journey on Instagram, and see how practice turned my passion into something beautiful!</p>
-  </div>
-
-  <div class="about-item">
-    <h3>Something Big Is Coming... 🚀</h3>
-    <p>Keep an eye out—I’m about to launch something special on Instagram. It's going to be a space where creativity knows no limits. Trust me, you won’t want to miss it!</p>
-  </div>
-</section>
-
-
-<section class="experience" data-aos="fade-right">
+<section class="experience" data-aos="fade-up">
   <div class="container">
-    <h2 class="section-title">Working Experience</h2>
+    <h2 class="section-title">Work Experience</h2>
     
-    <div class="job">
-      <h3>Deloitte (Offices of the US) | Senior Analyst <span class="date">06/2023-Present</span></h3>
-      <p>Led cross-functional teams in high-impact projects, focusing on microservices, automation, security, and SSDLC while mentoring junior members.</p>
-      <ul>
-        <li><strong>Reporting Dashboard:</strong> Built a full-stack application providing country leads detailed user insights, saving 150k annually.</li>
-        <li><strong>Deloitte Storefront & Taxonomy:</strong> Led the end-to-end lifecycle of Deloitte Taxonomy updates, ensuring compliance with new functional changes across all applications.</li>
-        <li><strong>PI Planning Automation:</strong> Automated SAFE Agile Program Increment planning using SharePoint Online and Power Automate, reducing time and effort for Scrum Masters and Release Train Engineers.</li>
-        <li><strong>Security Scans:</strong> Leading static and dynamic security scans using Fortify and working on automating scans via Azure DevOps pipelines.</li>
-        <li><strong>Custom SharePoint Solutions:</strong> Developing and deploying custom solutions on both SharePoint On-premises and SharePoint Online to meet business needs.</li>
-      </ul>
-    </div>
-    
-    <div class="job">
-      <h3>Deloitte (Offices of the US) | Analyst <span class="date">06/2021-05/2023</span></h3>
-      <p>Implemented WCAG accessibility, guest access tools, Adobe Analytics, One Trust compliance, and SharePoint customizations. Developed SPFX web parts and PowerShell scripts.</p>
-      <ul>
-        <li><strong>Accessibility Compatibility:</strong> Implemented WCAG-compliant accessibility for on-premises and cloud apps, achieving an accessibility score of 98.</li>
-        <li><strong>Guest User Management:</strong> Developed a secure tool for managing guest user access to cloud apps with admin approval workflows to prevent internal threats.</li>
-        <li><strong>Customized Tabs Functionality:</strong> Designed and developed a custom SPFX web part allowing users to organize multiple web parts in tabbed layouts for cleaner page designs.</li>
-        <li><strong>Exporting Data for External Users:</strong> Built a feature enabling external users to download data from SharePoint lists, ensuring compliance with company regulations.</li>
-      </ul>
-    </div>
-    
-    <div class="job">
-      <h3>Deloitte (Offices of the US) | Student Intern <span class="date">01/2021-06/2021</span></h3>
-      <ul>
-        <li>Learned SharePoint Online and On-Premises architecture basics.</li>
-        <li>Automated ETL pipelines for large-scale data optimization and migration.</li>
-        <li>Executed WCAG accessibility testing using WAVE and Lighthouse.</li>
-        <li>Developed Application Lifecycle Management cycles and deployments.</li>
-      </ul>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Deloitte (Offices of the US) | Senior Analyst <span class="date">06/2023-Present</span></h3>
+          <p>Leading cross-functional teams in high-impact projects, focusing on microservices, automation, security, and SSDLC. Mentoring junior members for seamless delivery.</p>
+        </div>
+        <div class="timeline-icon">
+          <i class="fas fa-briefcase"></i> <!-- Icon for Senior Analyst role -->
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Deloitte (Offices of the US) | Analyst <span class="date">06/2021-05/2023</span></h3>
+          <p>Implemented accessibility tools and SharePoint customizations, focusing on user experience and security.</p>
+        </div>
+        <div class="timeline-icon">
+          <i class="fas fa-cogs"></i> <!-- Icon for Analyst role -->
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Deloitte (Offices of the US) | Student Intern <span class="date">01/2021-06/2021</span></h3>
+          <p>Worked on automation and ETL pipelines, learning the basics of SharePoint architecture and accessibility compliance.</p>
+        </div>
+        <div class="timeline-icon">
+          <i class="fas fa-laptop-code"></i> <!-- Icon for Intern role -->
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-
-<section class="projects" data-aos="fade-up">
+<section class="projects" data-aos="fade-left">
   <div class="container">
     <h2 class="section-title">Projects</h2>
-    <div class="project">
-      <h3>Smart Book Mangt & Author Collaboration System
-        <a href="https://github.com/GudaPriyaLekha/2023MT93265_Dissertation" target="_blank">
-          <i class="fab fa-github fa-2x"></i> <div>view my code on GitHub</div>
-        </a>
-      </h3>
-      <p>Building an innovative platform for booklovers to manage, rent, and exchange books, while connecting authors and integrating OpenAI for story suggestions and personalized recommendations.</p>
-    </div>
-    <div class="project">
-      <h3>AI-Powered Chatbot Development
-        <a href="https://github.com/GudaPriyaLekha/DesignOfConversationsExperiences" target="_blank">
-          <i class="fab fa-github fa-2x"></i><div>view my code on GitHub</div>
-        </a>
-      </h3>
-      <p>Developed a multifunctional AI chatbot using Assembly AI and OpenAI APIs for tasks like text generation, speech-to-text, and sentiment analysis with a user-friendly UI.</p>
+    
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-icon">
+          <i class="fas fa-book"></i> <!-- Book icon for Smart Book Management -->
+        </div>
+        <h3>Smart Book Management & Author Collaboration System</h3>
+        <p>Developed a platform for book lovers to manage, rent, and exchange books while connecting authors. Integrates OpenAI for story suggestions.</p>
+        <a href="https://github.com/GudaPriyaLekha/2023MT93265_Dissertation" target="_blank" class="view-btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">
+          <i class="fas fa-robot"></i> <!-- AI icon for Chatbot -->
+        </div>
+        <h3>AI-Powered Chatbot</h3>
+        <p>Created an AI chatbot for text generation, sentiment analysis, and speech-to-text functionality using OpenAI and Assembly AI.</p>
+        <a href="https://github.com/GudaPriyaLekha/DesignOfConversationsExperiences" target="_blank" class="view-btn">View on GitHub</a>
+      </div>
     </div>
   </div>
 </section>
+
 
 <section class="skills" data-aos="fade-right">
   <div class="container">
     <h2 class="section-title">Skills</h2>
     
     <div class="skill">
-      <span>Program Management</span>
+      <div class="skill-header">
+        <i class="fas fa-cogs"></i> <!-- Icon for Program Management -->
+        <span>Program Management</span>
+      </div>
       <p>Decision-making, Project coordination, Interpersonal skills, Tech documentation, MS Office Apps, Life cycle management</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 90%;"></div>
+      </div>
     </div>
     
     <div class="skill">
-      <span>Back-end Skills</span>
+      <div class="skill-header">
+        <i class="fas fa-code"></i> <!-- Icon for Back-end Skills -->
+        <span>Back-end Skills</span>
+      </div>
       <p>.NET, Web API, Entity Framework, OData</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 80%;"></div>
+      </div>
     </div>
     
     <div class="skill">
-      <span>Data Storage</span>
+      <div class="skill-header">
+        <i class="fas fa-database"></i> <!-- Icon for Data Storage -->
+        <span>Data Storage</span>
+      </div>
       <p>MSSQL | MySQL</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 85%;"></div>
+      </div>
     </div>
     
     <div class="skill">
-      <span>Front-end Skills</span>
+      <div class="skill-header">
+        <i class="fas fa-desktop"></i> <!-- Icon for Front-end Skills -->
+        <span>Front-end Skills</span>
+      </div>
       <p>React, TypeScript, SASS, REST, Accessibility, jQuery</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 75%;"></div>
+      </div>
     </div>
     
     <div class="skill">
-      <span>Tools & Technologies</span>
+      <div class="skill-header">
+        <i class="fas fa-tools"></i> <!-- Icon for Tools & Technologies -->
+        <span>Tools & Technologies</span>
+      </div>
       <p>Figma, Mural, SharePoint, GitHub, Power Platform, Azure DevOps, Postman, Visual Studio, Visual Studio Code, ULS</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 70%;"></div>
+      </div>
     </div>
     
     <div class="skill">
-      <span>Azure</span>
+      <div class="skill-header">
+        <i class="fab fa-microsoft"></i> <!-- Icon for Azure -->
+        <span>Azure</span>
+      </div>
       <p>App Service, App Service Environment, API Management, Azure Storage, Active Directory, Azure Functions</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 65%;"></div>
+      </div>
     </div>
+    
   </div>
 </section>
 
+
+
+<!-- Contact Me Section -->
 <section class="contact" data-aos="fade-left">
   <div class="container">
     <h2 class="section-title">Contact Me</h2>
-    <p>Email: gudapriyalekha@gmail.com</p>
-    <div>
-      <a href="https://github.com/GudaPriyaLekha" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github fa-2x"></i>
+    <p>Email: <a href="mailto:gudapriyalekha@gmail.com">gudapriyalekha@gmail.com</a></p>
+    <div class="social-links">
+      <a href="https://github.com/GudaPriyaLekha" target="_blank" class="social-icon">
+        <i class="fab fa-github fa-3x"></i>
       </a>
-      <a href="https://linkedin.com/in/priyalekhaguda" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin fa-2x"></i>
+      <a href="https://linkedin.com/in/priyalekhaguda" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin fa-3x"></i>
       </a>
     </div>
   </div>
 </section>
 
-
+<!-- Footer -->
 <footer class="footer">
-  <p>&copy; 2025. Built with love and passion.</p>
+  <p>&copy; 2025 Priya Lekha Guda. Built with passion and creativity.</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
